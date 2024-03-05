@@ -7,7 +7,7 @@ defmodule SleepyHeadWeb.SleepyHeadController do
 
   def sleep(conn, params) do
     sleep_ms =
-      case params["sleep"] do
+      case params["ms"] do
         nil ->
           @default_sleep_ms
 
