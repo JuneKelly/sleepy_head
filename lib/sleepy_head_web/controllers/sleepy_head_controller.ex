@@ -15,8 +15,9 @@ defmodule SleepyHeadWeb.SleepyHeadController do
           String.to_integer(n)
       end
 
-    Logger.info("[SleepyHead] sleeping for #{sleep_ms}")
+    Logger.info("[SleepyHead] (#{inspect(self())}) sleeping for #{sleep_ms}")
     Process.sleep(sleep_ms)
+    Logger.info("[SleepyHead] (#{inspect(self())}) done")
 
     conn
     |> put_status(:ok)
