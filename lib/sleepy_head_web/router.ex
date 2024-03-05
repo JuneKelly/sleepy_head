@@ -7,5 +7,6 @@ defmodule SleepyHeadWeb.Router do
 
   scope "/api", SleepyHeadWeb do
     pipe_through :api
+    get("/sleep", SleepyHeadController, :sleep)
   end
 end
