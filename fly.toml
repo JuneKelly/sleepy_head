@@ -26,3 +26,9 @@ kill_signal = 'SIGTERM'
 
 [[vm]]
   size = 'shared-cpu-1x'
+
+[services]
+  [services.concurrency]
+    type = "connections"
+    hard_limit = 10000
+    soft_limit = 10000
